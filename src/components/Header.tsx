@@ -8,47 +8,51 @@ export default function Header() {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
+    { name: 'About Us', href: '/about' },
     { name: 'Risk Free Marketing®', href: '/apply' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact Us', href: '/contact' },
   ];
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-black sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+        <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-orange-500">Yes</span>
-              <span className="text-2xl font-bold text-gray-900">Crew</span>
+              <span className="text-xl font-bold text-white">Yes Crew</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-orange-500 font-medium transition-colors"
+                className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
               >
                 {item.name}
               </Link>
             ))}
             <a
               href="tel:+14249990653"
-              className="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium"
+              className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
             >
               (424) 999-0653
             </a>
+            <button className="text-gray-300 hover:text-white">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-700 hover:text-orange-500"
+              className="text-white"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {mobileMenuOpen ? (
@@ -63,12 +67,12 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden pb-4">
+          <div className="md:hidden pb-4 border-t border-gray-800">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-gray-700 hover:text-orange-500 font-medium"
+                className="block py-2 text-gray-300 hover:text-white text-sm font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
@@ -76,7 +80,7 @@ export default function Header() {
             ))}
             <a
               href="tel:+14249990653"
-              className="block mt-2 text-center bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium"
+              className="block py-2 text-gray-300 hover:text-white text-sm font-medium"
             >
               (424) 999-0653
             </a>
