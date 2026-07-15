@@ -1,0 +1,56 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/apply-to-risk-free-marketing",
+      "destination": "/apply",
+      "permanent": true
+    },
+    {
+      "source": "/risk-free-marketing",
+      "destination": "/apply",
+      "permanent": true
+    },
+    {
+      "source": "/2026/04/29/:slug*",
+      "destination": "/blog/:slug*",
+      "permanent": true
+    },
+    {
+      "source": "/2026/04/11/:slug*",
+      "destination": "/blog/:slug*",
+      "permanent": true
+    },
+    {
+      "source": "/2026/04/03/:slug*",
+      "destination": "/blog/:slug*",
+      "permanent": true
+    },
+    {
+      "source": "/2026/03/26/:slug*",
+      "destination": "/blog/:slug*",
+      "permanent": true
+    },
+    {
+      "source": "/2026/02/25/:slug*",
+      "destination": "/blog/:slug*",
+      "permanent": true
+    },
+    {
+      "source": "/2025/11/10/:slug*",
+      "destination": "/blog/:slug*",
+      "permanent": true
+    }
+  ]
+}
