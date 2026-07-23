@@ -1,55 +1,33 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nextjs",
   "redirects": [
     {
-      "source": "/about-us",
-      "destination": "/about",
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug",
+      "destination": "/blog/:slug",
       "permanent": true
     },
     {
-      "source": "/contact-us",
-      "destination": "/contact",
+      "source": "/about",
+      "destination": "/about-us",
       "permanent": true
     },
     {
-      "source": "/apply-to-risk-free-marketing",
-      "destination": "/apply",
+      "source": "/contact",
+      "destination": "/contact-us",
       "permanent": true
     },
     {
-      "source": "/risk-free-marketing",
-      "destination": "/apply",
+      "source": "/apply",
+      "destination": "/apply-to-risk-free-marketing",
       "permanent": true
     },
     {
-      "source": "/2026/04/29/:slug*",
-      "destination": "/blog/:slug*",
+      "source": "/category/:slug",
+      "destination": "/blog",
       "permanent": true
     },
     {
-      "source": "/2026/04/11/:slug*",
-      "destination": "/blog/:slug*",
-      "permanent": true
-    },
-    {
-      "source": "/2026/04/03/:slug*",
-      "destination": "/blog/:slug*",
-      "permanent": true
-    },
-    {
-      "source": "/2026/03/26/:slug*",
-      "destination": "/blog/:slug*",
-      "permanent": true
-    },
-    {
-      "source": "/2026/02/25/:slug*",
-      "destination": "/blog/:slug*",
-      "permanent": true
-    },
-    {
-      "source": "/2025/11/10/:slug*",
-      "destination": "/blog/:slug*",
+      "source": "/author/:slug",
+      "destination": "/blog",
       "permanent": true
     }
   ]

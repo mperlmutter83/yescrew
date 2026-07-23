@@ -1,72 +1,72 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { blogPosts } from '@/lib/blog-data';
+import Link from "next/link";
+import Image from "next/image";
+import type { Metadata } from "next";
+import { blogPosts } from "@/lib/blog-data";
 
 export const metadata: Metadata = {
-  title: 'Blog',
-  description: 'Insights on marketing, local business growth, AI automation, and Risk Free Marketing from Yes Crew.',
+  title: "Blog - Yes Crew",
+  description:
+    "Check out the latest content from Yes Crew on marketing, AI, and growing your local service business with zero upfront cost.",
 };
 
-export default function BlogPage() {
+export default function Blog() {
   return (
-    <div className="bg-black text-white">
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">Check Out Some of Our Latest Content</h1>
-          <p className="text-gray-400 text-center max-w-2xl mx-auto">
-            Tips, insights, and strategies for growing your local business with Risk Free Marketing.
-          </p>
-        </div>
-      </section>
-
-      {/* Blog Posts Grid */}
-      <section className="py-8 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="bg-black">
+      <section className="py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-3xl md:text-5xl text-white text-center mb-16">
+            Check Out Some of Our Latest Content Below
+          </h1>
+          <div className="space-y-16">
             {blogPosts.map((post) => (
-              <article key={post.slug} className="bg-zinc-900 rounded-lg overflow-hidden hover:bg-zinc-800 transition-colors">
-                <div className="p-6">
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {post.categories.map((category) => (
-                      <span key={category} className="text-xs bg-red-900/50 text-red-400 px-2 py-1 rounded">
-                        {category}
-                      </span>
-                    ))}
-                  </div>
+              <article
+                key={post.slug}
+                className="grid md:grid-cols-2 gap-8 items-center"
+              >
+                {post.image ? (
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="relative block w-full aspect-video rounded-lg overflow-hidden bg-neutral-900"
+                  >
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </Link>
+                ) : (
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="relative flex items-center justify-center w-full aspect-video rounded-lg bg-[#1d1c24]"
+                  >
+                    <span className="text-[#2ea3f2] font-serif text-xl px-6 text-center">
+                      {post.title}
+                    </span>
+                  </Link>
+                )}
+                <div>
                   <Link href={`/blog/${post.slug}`}>
-                    <h2 className="text-lg font-semibold mb-2 hover:text-red-500 transition-colors">
+                    <h2 className="text-2xl text-white mb-3 hover:text-[#2ea3f2] transition-colors">
                       {post.title}
                     </h2>
                   </Link>
-                  <p className="text-gray-500 text-sm mb-3">{post.date}</p>
-                  <p className="text-gray-400 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
+                  <p className="text-sm text-neutral-500 mb-4 font-sans">
+                    by mperlmutter | {post.date} | {post.category}
+                  </p>
+                  <p className="text-neutral-400 leading-relaxed mb-5">
+                    {post.excerpt}
+                  </p>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="text-red-500 text-sm font-medium hover:text-red-400 transition-colors"
+                    className="inline-block bg-[#2ea3f2] text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-white hover:text-black transition-colors"
                   >
-                    Read More →
+                    Read More
                   </Link>
                 </div>
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-red-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Grow Your Business?</h2>
-          <p className="text-red-100 mb-8">
-            Apply for Risk Free Marketing today and start getting clients with zero upfront cost.
-          </p>
-          <Link
-            href="/apply"
-            className="inline-block bg-white text-red-600 px-6 py-3 rounded font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Apply Now
-          </Link>
         </div>
       </section>
     </div>

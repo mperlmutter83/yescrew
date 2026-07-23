@@ -1,313 +1,306 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
+
+const featureCards = [
+  {
+    title: "Grow Your Business",
+    image: "/e3803745-d93f-49f4-a7f3-3abd67d1775e.png",
+    text: "Get clients sent to your business with no upfront cost. Risk FREE Marketing® puts up all the money to get you clients and only gets paid a performance fee once we deliver your business a paying client.",
+    cta: "Learn More",
+  },
+  {
+    title: "Expand Your Network",
+    image: "/AdobeStock_389578103-scaled.jpeg",
+    text: "Get referred opportunities through our network. We call it Yes Crew. Members of our network offer each other's services and get paid referral fees for referring to the network.",
+    cta: "Discover How",
+  },
+  {
+    title: "Make Passive Income",
+    image: "/AdobeStock_683895359-scaled.jpeg",
+    text: "Make money while you sleep. Get paid by referring to the network. Make your small business look like a large company with our network.",
+    cta: "Get Started",
+  },
+];
+
+const testimonialVideos = [
+  { id: "Z9xA3wD-Fus", title: "Danny Thousand Oaks Barber Testimonial for Risk FREE Marketing®" },
+  { id: "iDDmGwxzzsU", title: "Eli the Barber Seems Very Happy with Risk FREE Marketing®" },
+  { id: "qDfnPrZIUTE", title: "\u201cI Only Pay for Results\u201d \u2013 Real Experience with Yes Crew & Risk Free Marketing®" },
+];
+
+const everythingYouNeed = [
+  { emoji: "🚀", title: "Get More Clients", items: ["Website", "SEO", "Social Media"] },
+  { emoji: "💰", title: "Close More Clients", items: ["Appointment Booking", "CRM System"] },
+  { emoji: "🤖", title: "Automate Everything", items: ["AI Assistant", "Follow-Ups"] },
+];
+
+const steps = [
+  {
+    number: 1,
+    title: "Join the Network",
+    text: "Sign up and become a part of the Yes Crew community, where businesses support each other through referrals.",
+  },
+  {
+    number: 2,
+    title: "Share Opportunities",
+    text: "Post opportunities that your business can't take on and refer them to other members in the network.",
+  },
+  {
+    number: 3,
+    title: "Receive Referrals",
+    text: "Get referrals from other businesses in the network, allowing you to say yes to more opportunities and grow your business.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="bg-black text-white">
-      {/* Hero Section with Background Image */}
-      <section 
-        className="relative min-h-[600px] flex items-center"
+    <div className="bg-black">
+      {/* HERO */}
+      <section
+        className="relative bg-cover bg-center"
         style={{
-          backgroundImage: 'linear-gradient(-90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.9) 100%), url("/e3803745-d93f-49f4-a7f3-3abd67d1775e.png")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundImage:
+            "linear-gradient(-90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.9) 100%), url(/e3803745-d93f-49f4-a7f3-3abd67d1775e.png)",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
-          <p className="text-gray-400 text-xs uppercase tracking-widest mb-4">Unlock New Opportunities</p>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif italic mb-6">
-            Say Yes with<br />Yes Crew
-          </h1>
-          <p className="text-gray-300 max-w-lg mb-8 text-sm">
-            Join our network to get clients from Risk FREE Marketing®, referrals from the network and watch your business grow.
-          </p>
-          <Link
-            href="/apply"
-            className="inline-flex items-center bg-transparent border border-white text-white px-6 py-3 text-sm font-medium hover:bg-white hover:text-black transition-colors"
-          >
-            Join Now <span className="ml-2">→</span>
-          </Link>
+        <div className="max-w-7xl mx-auto px-6 py-28 lg:py-40">
+          <div className="max-w-2xl">
+            <p className="text-sm tracking-[0.2em] uppercase text-white mb-4">
+              Unlock New Opportunities
+            </p>
+            <h1 className="text-4xl md:text-6xl text-white leading-tight mb-6">
+              Say Yes with Yes Crew
+            </h1>
+            <p className="text-lg text-neutral-200 mb-8">
+              Join our network to get clients from Risk FREE Marketing®,
+              referrals from the network and watch your business grow.
+            </p>
+            <Link
+              href="/contact-us"
+              className="inline-block bg-white text-black font-semibold px-8 py-3 rounded-full hover:bg-[#2ea3f2] hover:text-white transition-colors"
+            >
+              Join Now
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Vision and Mission */}
-      <section className="py-16 px-4">
+      {/* VISION AND MISSION */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto bg-white rounded-lg p-10 md:p-14 text-center">
+          <h2 className="text-3xl md:text-4xl text-[#0e0c19] mb-6">
+            Our Vision and Mission
+          </h2>
+          <p className="text-neutral-700 leading-relaxed mb-4">
+            Risk Free Marketing® empowers people to do what they love by getting
+            them clients with zero upfront costs. We invest in them to get them
+            clients and give them AI powered systems that support their business
+            to free up their time so they can do what they love.
+          </p>
+          <p className="text-neutral-700 leading-relaxed">
+            We then unite them together in a concept I call Yes Crew. Yes Crew
+            unites small businesses together to look like a large corporations
+            to give small business passive income by offering additional
+            services through our network. Thus delivering exceptional value and
+            see the world from a win-win perspective.
+          </p>
+        </div>
+        <div className="max-w-4xl mx-auto text-center mt-16">
+          <h2 className="text-2xl md:text-3xl text-white leading-snug">
+            “If you don’t find a way to make money while you sleep, you will
+            work until you die.”
+          </h2>
+          <p className="text-xl text-white mt-4">-Warren Buffett</p>
+        </div>
+      </section>
+
+      {/* 3 FEATURE CARDS */}
+      <section className="py-16 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+          {featureCards.map((card) => (
+            <div key={card.title} className="flex flex-col">
+              <h3 className="text-2xl text-neutral-300 mb-5">{card.title}</h3>
+              <div className="relative w-full h-52 mb-5 rounded overflow-hidden">
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-neutral-400 leading-relaxed mb-6 flex-1">
+                {card.text}
+              </p>
+              <div>
+                <Link
+                  href="/contact-us"
+                  className="inline-block bg-[#2ea3f2] text-white font-semibold px-6 py-2.5 rounded-full hover:bg-white hover:text-black transition-colors"
+                >
+                  {card.cta}
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* DISCOVER RISK FREE MARKETING */}
+      <section className="py-20 px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-b from-zinc-900 to-zinc-800 border border-zinc-700 rounded-lg p-8 md:p-12">
-            <h2 className="text-2xl md:text-3xl font-serif text-center mb-6 text-amber-100">Our Vision and Mission</h2>
-            <p className="text-gray-300 text-center text-sm leading-relaxed mb-4">
-              Risk Free Marketing® empowers people to do what they love by getting them clients with zero upfront costs. We invest in them to get them clients and give them AI powered systems that support their business to free up their time so they can do what they love.
-            </p>
-            <p className="text-gray-300 text-center text-sm leading-relaxed">
-              We then unite them together in a concept I call Yes Crew. Yes Crew unites small businesses together to look like a large corporations to give small business passive income by offering additional services through our network. Thus delivering exceptional value and see the world from a win-win perspective.
-            </p>
+          <h2 className="text-4xl md:text-5xl text-white mb-8">
+            Discover Risk FREE Marketing®
+          </h2>
+          <div className="text-[#ff0000] text-2xl md:text-3xl font-bold space-y-2 mb-10 font-sans">
+            <p>No upfront cost</p>
+            <p>No contracts</p>
+            <p>You only pay when you get paid</p>
           </div>
-        </div>
-      </section>
-
-      {/* Warren Buffett Quote */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xl md:text-2xl font-serif italic text-gray-200">
-            &ldquo;If you don&apos;t find a way to make money while you sleep, you will work until you die.&rdquo;
-          </p>
-          <p className="text-gray-400 mt-4 font-serif">-Warren Buffett</p>
-        </div>
-      </section>
-
-      {/* Three Pillars */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Grow Your Business */}
-            <div>
-              <h3 className="text-lg font-serif italic mb-4">Grow Your Business</h3>
-              <div className="mb-4">
-                <Image
-                  src="/AdobeStock_389578103-scaled.jpeg"
-                  alt="Grow Your Business"
-                  width={400}
-                  height={267}
-                  className="w-full h-48 object-cover rounded"
-                />
-              </div>
-              <p className="text-gray-400 text-sm mb-6">
-                Get clients sent to your business with no upfront cost. Risk FREE Marketing® puts up all the money to get you clients and only gets paid a performance fee once we deliver your business a paying client.
-              </p>
-              <Link 
-                href="/apply" 
-                className="inline-flex items-center bg-transparent border border-white text-white px-4 py-2 text-sm hover:bg-white hover:text-black transition-colors"
-              >
-                Learn More <span className="ml-2">→</span>
-              </Link>
-            </div>
-
-            {/* Expand Your Network */}
-            <div>
-              <h3 className="text-lg font-serif italic mb-4">Expand Your Network</h3>
-              <div className="mb-4">
-                <Image
-                  src="/AdobeStock_683895359-scaled.jpeg"
-                  alt="Expand Your Network"
-                  width={400}
-                  height={224}
-                  className="w-full h-48 object-cover rounded"
-                />
-              </div>
-              <p className="text-gray-400 text-sm mb-2">
-                Get referred opportunities through our network.
-              </p>
-              <p className="text-gray-400 text-sm mb-6">
-                We call it Yes Crew. Members of our network offer each other&apos;s services and get paid referral fees for referring to the network.
-              </p>
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center bg-red-700 text-white px-4 py-2 text-sm hover:bg-red-800 transition-colors"
-              >
-                Discover How <span className="ml-2">→</span>
-              </Link>
-            </div>
-
-            {/* Make Passive Income */}
-            <div>
-              <h3 className="text-lg font-serif italic mb-4">Make Passive Income</h3>
-              <div className="mb-4">
-                <Image
-                  src="/AdobeStock_804340095-scaled.jpeg"
-                  alt="Make Passive Income"
-                  width={400}
-                  height={267}
-                  className="w-full h-48 object-cover rounded"
-                />
-              </div>
-              <p className="text-gray-400 text-sm mb-2">
-                Make money while you sleep. Get paid by referring to the network.
-              </p>
-              <p className="text-gray-400 text-sm mb-6">
-                Make your small business look like a large company with our network.
-              </p>
-              <Link 
-                href="/apply" 
-                className="inline-flex items-center bg-red-700 text-white px-4 py-2 text-sm hover:bg-red-800 transition-colors"
-              >
-                Get Started <span className="ml-2">→</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Discover Risk FREE Marketing */}
-      <section className="py-16 px-4 bg-zinc-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6">Discover Risk FREE Marketing®</h2>
-          <p className="text-red-500 text-lg font-medium">No upfront cost</p>
-          <p className="text-red-500 text-lg font-medium">No contracts</p>
-          <p className="text-red-500 text-lg font-medium mb-8">You only pay when you get paid</p>
           <Link
-            href="/apply"
-            className="inline-flex items-center bg-gradient-to-r from-yellow-600 to-yellow-500 text-black px-6 py-3 text-sm font-semibold uppercase tracking-wide hover:from-yellow-500 hover:to-yellow-400 transition-colors"
+            href="/apply-to-risk-free-marketing"
+            className="inline-block bg-[#1d1c24] border border-neutral-700 text-white font-semibold px-10 py-4 rounded-full hover:bg-[#2ea3f2] transition-colors"
           >
-            <span className="mr-2">👉</span> APPLY FOR RISK FREE MARKETING®
+            👉 APPLY FOR RISK FREE MARKETING®
           </Link>
         </div>
       </section>
 
-      {/* Real Results / Video Testimonials */}
-      <section className="py-16 px-4 bg-white text-black">
+      {/* REAL RESULTS - TESTIMONIAL VIDEOS */}
+      <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-12">Real Results from Businesses Like Yours</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="aspect-[9/16] bg-black rounded-lg overflow-hidden">
-              <iframe 
-                src="https://www.youtube.com/embed/Z9xA3wD-Fus?rel=0" 
-                title="Danny Thousand Oaks Barber Testimonial for Risk FREE Marketing®"
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-            <div className="aspect-[9/16] bg-black rounded-lg overflow-hidden">
-              <iframe 
-                src="https://www.youtube.com/embed/iDDmGwxzzsU?rel=0" 
-                title="Eli the Barber Seems Very Happy with Risk FREE Marketing®"
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-            <div className="aspect-[9/16] bg-black rounded-lg overflow-hidden">
-              <iframe 
-                src="https://www.youtube.com/embed/qDfnPrZIUTE?rel=0" 
-                title="I Only Pay for Results – Real Experience with Yes Crew & Risk Free Marketing®"
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why This Isn't Like Other Marketing */}
-      <section className="py-16 px-4 bg-zinc-900">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-semibold">Why This Isn&apos;t Like Other Marketing</h2>
-            </div>
-            <div>
-              <p className="text-gray-400 mb-4">Most marketing agencies charge you upfront and hope it works.</p>
-              <p className="text-red-500 text-xl font-semibold mb-4">We do the opposite.</p>
-              <p className="text-gray-300 text-sm">We build everything for you</p>
-              <p className="text-gray-300 text-sm">We send you real clients</p>
-              <p className="text-gray-300 text-sm">You only pay after you get paid!</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Everything You Need */}
-      <section className="py-16 px-4 bg-white text-black">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-12">
-            Everything You Need — <span className="text-red-600">$0 Upfront</span>
+          <h2 className="text-3xl md:text-5xl text-white text-center mb-14">
+            Real Results from Businesses Like Yours
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <p className="text-red-600 font-semibold mb-3">🚀 Get More Clients</p>
-              <ul className="text-gray-600 text-sm space-y-1 ml-6">
-                <li>• Website</li>
-                <li>• SEO</li>
-                <li>• Social Media</li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-red-600 font-semibold mb-3">💰 Close More Clients</p>
-              <ul className="text-gray-600 text-sm space-y-1 ml-6">
-                <li>• Appointment Booking</li>
-                <li>• CRM System</li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-red-600 font-semibold mb-3">🤖 Automate Everything</p>
-              <ul className="text-gray-600 text-sm space-y-1 ml-6">
-                <li>• AI Assistant</li>
-                <li>• Follow-Ups</li>
-              </ul>
+            {testimonialVideos.map((video) => (
+              <div
+                key={video.id}
+                className="aspect-[9/16] max-h-[560px] w-full mx-auto rounded-lg overflow-hidden bg-neutral-900"
+              >
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.id}`}
+                  title={video.title}
+                  className="w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY THIS ISN'T LIKE OTHER MARKETING */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+          <h2 className="text-3xl md:text-5xl text-white leading-tight">
+            Why This Isn’t Like Other Marketing
+          </h2>
+          <div>
+            <p className="text-neutral-400 text-lg mb-4">
+              Most marketing agencies charge you upfront and hope it works.
+            </p>
+            <p className="text-[#ff0000] text-3xl md:text-4xl font-bold mb-6 font-sans">
+              We do the opposite.
+            </p>
+            <div className="space-y-3 text-xl text-white">
+              <p>We build everything for you</p>
+              <p>We send you real clients</p>
+              <p>You only pay after you get paid!</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="py-16 px-4 bg-black">
-        <div className="max-w-4xl mx-auto">
-          <div className="aspect-video bg-zinc-800 rounded-lg overflow-hidden">
-            <iframe 
-              src="https://www.youtube.com/embed/xpAbdkNeDns?rel=0" 
-              title="Yes Crew & Risk Free Marketing® Gets Businesses Client with Zero Upfront Cost"
-              className="w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-16 px-4 bg-black">
+      {/* EVERYTHING YOU NEED */}
+      <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-serif italic mb-2">How It Works</h2>
-          <p className="text-gray-400 text-sm mb-12">Discover how Yes Crew helps small businesses seize new opportunities with ease.</p>
-          
-          <div className="bg-zinc-900 rounded-lg p-8">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-12 h-12 border-2 border-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4 text-yellow-500 font-bold">
-                  1
-                </div>
-                <h3 className="font-serif italic mb-2">Join the Network</h3>
-                <p className="text-gray-400 text-sm">
-                  Sign up and become a part of the Yes Crew community, where businesses support each other through referrals.
-                </p>
+          <h2 className="text-3xl md:text-5xl text-white text-center mb-14">
+            Everything You Need —{" "}
+            <span className="text-[#ff0000]">$0 Upfront</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            {everythingYouNeed.map((col) => (
+              <div key={col.title} className="text-center md:text-left">
+                <h3 className="text-2xl text-white mb-5 font-sans font-bold">
+                  {col.emoji} {col.title}
+                </h3>
+                <ul className="space-y-2 text-neutral-300 text-lg">
+                  {col.items.map((item) => (
+                    <li key={item} className="flex items-center gap-2 justify-center md:justify-start">
+                      <span className="text-[#2ea3f2]">•</span> {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="text-center">
-                <div className="w-12 h-12 border-2 border-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4 text-yellow-500 font-bold">
-                  2
-                </div>
-                <h3 className="font-serif italic mb-2">Share Opportunities</h3>
-                <p className="text-gray-400 text-sm">
-                  Post opportunities that your business can&apos;t take on and refer them to other members in the network.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 border-2 border-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4 text-yellow-500 font-bold">
-                  3
-                </div>
-                <h3 className="font-serif italic mb-2">Receive Referrals</h3>
-                <p className="text-gray-400 text-sm">
-                  Get referrals from other businesses in the network, allowing you to say yes to more opportunities and grow your business.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Join CTA */}
-      <section className="py-16 px-4 bg-zinc-900">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-serif italic mb-4">Join Yes Crew Today!</h2>
-          <p className="text-gray-400 text-sm mb-8">
-            Don&apos;t miss out on valuable opportunities. Join Yes Crew and start saying yes to new business prospects. Together, we can bring businesses together and help each other succeed.
-          </p>
-          <Link
-            href="/apply"
-            className="inline-flex items-center bg-transparent border border-white text-white px-6 py-3 text-sm font-medium hover:bg-white hover:text-black transition-colors"
-          >
-            Join Now <span className="ml-2">→</span>
-          </Link>
+      {/* MAIN VIDEO */}
+      <section className="py-16 px-6">
+        <div className="max-w-4xl mx-auto aspect-video rounded-lg overflow-hidden bg-neutral-900">
+          <iframe
+            src="https://www.youtube.com/embed/xpAbdkNeDns"
+            title="Yes Crew & Risk Free Marketing® Gets Businesses Client with Zero Upfront Cost"
+            className="w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto bg-white rounded-lg p-10 md:p-14">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl text-[#0e0c19] mb-4">
+              How It Works
+            </h2>
+            <p className="text-neutral-600">
+              Discover how Yes Crew helps small businesses seize new
+              opportunities with ease.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-10">
+            {steps.map((step) => (
+              <div key={step.number} className="text-center">
+                <div className="w-14 h-14 mx-auto mb-5 rounded-full border-4 border-[#d4af37] flex items-center justify-center text-2xl font-bold text-[#0e0c19] font-sans">
+                  {step.number}
+                </div>
+                <h3 className="text-xl text-[#0e0c19] mb-3">{step.title}</h3>
+                <p className="text-neutral-600 leading-relaxed">{step.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* JOIN YES CREW TODAY */}
+      <section
+        className="relative bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.35) 100%), url(/AdobeStock_804340095-scaled.jpeg)",
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="max-w-xl">
+            <h2 className="text-3xl md:text-5xl text-white mb-6">
+              Join Yes Crew Today!
+            </h2>
+            <p className="text-neutral-200 text-lg mb-8">
+              Don’t miss out on valuable opportunities. Join Yes Crew and start
+              saying yes to new business prospects. Together, we can bring
+              businesses together and help each other succeed.
+            </p>
+            <Link
+              href="/contact-us"
+              className="inline-block bg-white text-black font-semibold px-8 py-3 rounded-full hover:bg-[#2ea3f2] hover:text-white transition-colors"
+            >
+              Join Now
+            </Link>
+          </div>
         </div>
       </section>
     </div>
