@@ -3,9 +3,20 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts, getPostBySlug, getAllPostSlugs } from "@/lib/blog-data";
+import { getPost, getPosts, toRenderPost, type RenderPost } from "@/lib/api";
+
+const SITE_DOMAIN = "yescrew.com";
+
+export const revalidate = 60;
 
 export function generateStaticParams() {
   return getAllPostSlugs().map((slug) => ({ slug }));
+}
+
+async function resolvePost(slug: string): Promise<RenderPost | undefined> {
+  const apiPost = await getPost(SITE_DOMAIN, slug);
+  if (apiPost) return toRenderPost(apiPost);
+  return getPostBySlug(slug);
 }
 
 export async function generateMetadata({
@@ -14,7 +25,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await resolvePost(slug);
   if (!post) return { title: "Post Not Found - Yes Crew" };
   return {
     title: `${post.title} - Yes Crew`,
@@ -97,10 +108,13 @@ export default async function BlogPost({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await resolvePost(slug);
   if (!post) notFound();
 
-  const related = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
+  const apiPosts = await getPosts(SITE_DOMAIN);
+  const allPosts: RenderPost[] =
+    apiPosts.length > 0 ? apiPosts.map(toRenderPost) : blogPosts;
+  const related = allPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
   return (
     <div className="bg-black">

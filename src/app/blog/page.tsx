@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { blogPosts } from "@/lib/blog-data";
+import { getPosts, toRenderPost, type RenderPost } from "@/lib/api";
 
 export const metadata: Metadata = {
   title: "Blog - Yes Crew",
@@ -9,7 +10,14 @@ export const metadata: Metadata = {
     "Check out the latest content from Yes Crew on marketing, AI, and growing your local service business with zero upfront cost.",
 };
 
-export default function Blog() {
+const SITE_DOMAIN = "yescrew.com";
+
+export const revalidate = 60;
+
+export default async function Blog() {
+  const apiPosts = await getPosts(SITE_DOMAIN);
+  const posts: RenderPost[] =
+    apiPosts.length > 0 ? apiPosts.map(toRenderPost) : blogPosts;
   return (
     <div className="bg-black">
       <section className="py-20 px-6">
@@ -18,7 +26,7 @@ export default function Blog() {
             Check Out Some of Our Latest Content Below
           </h1>
           <div className="space-y-16">
-            {blogPosts.map((post) => (
+            {posts.map((post) => (
               <article
                 key={post.slug}
                 className="grid md:grid-cols-2 gap-8 items-center"
