@@ -1,6 +1,11 @@
+/**
+ * Fetch blog posts from the central Yes Crew API
+ * Uses ISR (Incremental Static Regeneration) with 60 second revalidation
+ */
+
 const API_BASE = "https://yescrew-dashboard.vercel.app/api/posts";
 
-export interface ApiBlogPost {
+export interface BlogPost {
   id: string;
   slug: string;
   title: string;
@@ -8,10 +13,16 @@ export interface ApiBlogPost {
   content: string;
   image_url: string | null;
   category: string | null;
-  author: string;
+  author?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  metaDescription?: string;
+  publishedAt?: string;
   publish_at: string | null;
   created_at: string;
 }
+
+export type ApiBlogPost = BlogPost;
 
 export interface RenderPost {
   slug: string;
@@ -20,10 +31,15 @@ export interface RenderPost {
   category: string;
   excerpt: string;
   image?: string;
+  author?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  metaDescription?: string;
+  publishedAt?: string;
   content: string;
 }
 
-export async function getPosts(siteDomain: string): Promise<ApiBlogPost[]> {
+export async function getPosts(siteDomain: string): Promise<BlogPost[]> {
   try {
     const res = await fetch(
       `${API_BASE}?site=${encodeURIComponent(siteDomain)}`,
@@ -40,7 +56,7 @@ export async function getPosts(siteDomain: string): Promise<ApiBlogPost[]> {
 export async function getPost(
   siteDomain: string,
   slug: string
-): Promise<ApiBlogPost | null> {
+): Promise<BlogPost | null> {
   try {
     const res = await fetch(
       `${API_BASE}?site=${encodeURIComponent(siteDomain)}&slug=${encodeURIComponent(slug)}`,
@@ -62,7 +78,7 @@ export function formatDate(dateString: string): string {
   }).format(new Date(dateString));
 }
 
-export function toRenderPost(p: ApiBlogPost): RenderPost {
+export function toRenderPost(p: BlogPost): RenderPost {
   return {
     slug: p.slug,
     title: p.title,
@@ -70,6 +86,37 @@ export function toRenderPost(p: ApiBlogPost): RenderPost {
     category: p.category || "Marketing",
     excerpt: p.excerpt || "",
     image: p.image_url || undefined,
+    author: p.author || "Yes Crew",
     content: p.content,
   };
+}
+
+export function contentToHtml(content: string): string {
+  const inline = (s: string) =>
+    s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  const blocks = content.split(/\n\n+/);
+  const out: string[] = [];
+  let list: string[] = [];
+  const flush = () => {
+    if (list.length) {
+      out.push("<ul>" + list.map((i) => `<li>${inline(i)}</li>`).join("") + "</ul>");
+      list = [];
+    }
+  };
+  for (const raw of blocks) {
+    const b = raw.trim();
+    if (!b) continue;
+    if (b.startsWith("<")) { flush(); out.push(b); continue; }
+    if (b.startsWith("- ")) {
+      const items = b.split("\n").filter((l) => l.trim().startsWith("- "));
+      list.push(...items.map((l) => l.trim().slice(2)));
+      continue;
+    }
+    flush();
+    if (b.startsWith("### ")) out.push(`<h3>${inline(b.slice(4))}</h3>`);
+    else if (b.startsWith("## ")) out.push(`<h2>${inline(b.slice(3))}</h2>`);
+    else out.push(`<p>${inline(b).replace(/\n/g, "<br>")}</p>`);
+  }
+  flush();
+  return out.join("\n");
 }
