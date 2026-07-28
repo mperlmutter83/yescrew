@@ -19,8 +19,8 @@ export default function PrivacyPolicy() {
             and security of the businesses and service providers who use our
             platform (“you,” “your”). This Privacy Policy explains how we
             collect, use, store, and share your information when you use our
-            lead generation platform (the “Platform”), which operates on a
-            performance-based model and connects businesses with a qualified
+            performance-based marketing platform (the “Platform”), which
+            operates on a performance-based model and connects businesses with a qualified
             network of service providers to help them expand into new
             opportunities and services.
           </p>
@@ -60,10 +60,10 @@ export default function PrivacyPolicy() {
                 improve our services and ensure proper functionality.
               </li>
             </ul>
-            <h3 className="text-xl text-white mb-2">d. Referral and Lead Data</h3>
+            <h3 className="text-xl text-white mb-2">d. Referral and Customer Data</h3>
             <ul className="list-disc list-inside ml-2 space-y-1">
               <li>
-                For leads we generate or service provider connections, we may
+                For customer referrals and service provider connections, we may
                 collect information such as business size, industry, service
                 needs, and any additional qualifying details necessary to match
                 you with the right partners.
@@ -91,7 +91,7 @@ export default function PrivacyPolicy() {
               </li>
               <li>
                 Communicate with You: Send updates, confirmations, and
-                notifications regarding leads, opportunities, and transactions.
+                notifications regarding referrals, opportunities, and transactions.
               </li>
               <li>
                 Comply with Legal Obligations: Maintain records for auditing,

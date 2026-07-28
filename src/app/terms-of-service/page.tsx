@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service - Yes Crew",
-  description: "Yes Crew Terms of Service — performance-based lead generation platform terms.",
+  description: "Yes Crew Terms of Service — performance-based marketing platform terms.",
 };
 
 const sections = [
   {
     title: "1. Services Provided",
     body: [
-      "1.1 The Platform generates qualified leads and connects Clients with Service Providers in our network.",
-      "1.2 We only receive compensation based on a performance-based structure, meaning fees are incurred only when a lead results in a pre-agreed qualifying event (such as a sale, booked appointment, or another measurable conversion).",
+      "1.1 The Platform connects Clients with new customer opportunities and with Service Providers in our network.",
+      "1.2 We only receive compensation based on a performance-based structure, meaning fees are incurred only when a referred customer results in a pre-agreed qualifying event (such as a sale, booked appointment, or another measurable conversion).",
       "1.3 We do not directly provide the products or services offered by the Service Providers and act solely as an intermediary.",
     ],
   },
@@ -32,31 +32,31 @@ const sections = [
     ],
   },
   {
-    title: "4. Lead Qualification and Tracking",
+    title: "4. Referral Qualification and Tracking",
     body: [
-      "4.1 We use industry-standard methods to verify and track qualified leads, including tracking pixels, call tracking, booking logs, and third-party reporting tools.",
-      "4.2 Clients are responsible for reviewing lead data and reporting any discrepancies within [5] business days of receipt.",
-      "4.3 Failure to dispute a lead within the dispute period constitutes acceptance of the lead as valid and billable (if performance conditions are met).",
+      "4.1 We use industry-standard methods to verify and track qualified referrals, including tracking pixels, call tracking, booking logs, and third-party reporting tools.",
+      "4.2 Clients are responsible for reviewing referral data and reporting any discrepancies within [5] business days of receipt.",
+      "4.3 Failure to dispute a referral within the dispute period constitutes acceptance of the referral as valid and billable (if performance conditions are met).",
     ],
   },
   {
     title: "5. Client Responsibilities",
     body: [
-      "5.1 You agree to: provide accurate information about your business, services, and target audience; promptly follow up on leads delivered by the Platform; comply with all applicable laws, including consumer protection and advertising laws.",
+      "5.1 You agree to: provide accurate information about your business, services, and target audience; promptly follow up on referrals delivered by the Platform; comply with all applicable laws, including consumer protection and advertising laws.",
       "5.2 You may not use the Platform for any illegal, fraudulent, or deceptive purposes. Any violation may result in termination and legal action.",
     ],
   },
   {
     title: "6. Disclaimer of Warranties",
     body: [
-      "6.1 The Platform, leads, and services are provided “as is” and “as available.” We make no guarantees regarding the volume, quality, or conversion rates of leads beyond the agreed performance terms.",
+      "6.1 The Platform, referrals, and services are provided “as is” and “as available.” We make no guarantees regarding the volume, quality, or conversion rates of referrals beyond the agreed performance terms.",
       "6.2 We do not guarantee that Service Providers referred to you will meet your expectations, and we are not responsible for any services rendered by Service Providers.",
     ],
   },
   {
     title: "7. Limitation of Liability",
     body: [
-      "7.1 To the maximum extent permitted by law, Yes Crew shall not be liable for any indirect, incidental, special, or consequential damages, including lost profits, arising out of your use of the Platform, leads, or referrals.",
+      "7.1 To the maximum extent permitted by law, Yes Crew shall not be liable for any indirect, incidental, special, or consequential damages, including lost profits, arising out of your use of the Platform or referrals.",
       "7.2 Our total liability under these Terms shall not exceed the total amount paid by you to us in the three (3) months preceding the claim.",
     ],
   },
@@ -106,8 +106,8 @@ export default function TermsOfService() {
         <div className="space-y-8 text-neutral-300 leading-relaxed">
           <p>
             These Terms of Service (“Terms”) govern your use of Yes Crew
-            (“Platform,” “we,” “our,” or “us”), a performance-based lead
-            generation service that connects businesses (“Clients,” “you,” or
+            (“Platform,” “we,” “our,” or “us”), a performance-based marketing
+            service that connects businesses (“Clients,” “you,” or
             “your”) with a qualified network of service providers (“Service
             Providers”) to help expand your business into new opportunities and
             services.

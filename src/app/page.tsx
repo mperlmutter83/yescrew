@@ -29,7 +29,7 @@ const testimonialVideos = [
 ];
 
 const everythingYouNeed = [
-  { emoji: "🚀", title: "Get More Clients", items: ["Website", "SEO", "Social Media"] },
+  { emoji: "🚀", title: "Get More Clients", items: ["Website", "Social Media"] },
   { emoji: "💰", title: "Close More Clients", items: ["Appointment Booking", "CRM System"] },
   { emoji: "🤖", title: "Automate Everything", items: ["AI Assistant", "Follow-Ups"] },
 ];
@@ -153,7 +153,7 @@ export default function Home() {
           <div className="text-[#ff0000] text-2xl md:text-3xl font-bold space-y-2 mb-10 font-sans">
             <p>No upfront cost</p>
             <p>No contracts</p>
-            <p>You only pay when you get paid</p>
+            <p>You only pay when you get results</p>
           </div>
           <Link
             href="/apply-to-risk-free-marketing"
@@ -204,8 +204,8 @@ export default function Home() {
             </p>
             <div className="space-y-3 text-xl text-white">
               <p>We build everything for you</p>
-              <p>We send you real clients</p>
-              <p>You only pay after you get paid!</p>
+              <p>We connect you with real customers</p>
+              <p>You only pay for real results!</p>
             </div>
           </div>
         </div>

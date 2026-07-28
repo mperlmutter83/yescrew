@@ -6,18 +6,18 @@ import FAQAccordion from "@/components/FAQAccordion";
 export const metadata: Metadata = {
   title: "Risk FREE Marketing® - Yes Crew",
   description:
-    "We Bring You Clients. Get a Website, Leads, and Systems Built For You — $0 Upfront. We build everything for you, we send you real clients, you only pay after you get paid.",
+    "We Bring You Clients. Get a Website, Customers, and Systems Built For You — $0 Upfront. We build everything for you and you only pay when you get results.",
 };
 
 const everythingYouNeed = [
-  { emoji: "🚀", title: "Get More Clients", items: ["Website", "SEO", "Social Media"] },
+  { emoji: "🚀", title: "Get More Clients", items: ["Website", "Social Media"] },
   { emoji: "💰", title: "Close More Clients", items: ["Appointment Booking", "CRM System"] },
   { emoji: "🤖", title: "Automate Everything", items: ["AI Assistant", "Follow-Ups"] },
 ];
 
 const steps = [
   { title: "Step 1:", text: "We build your system" },
-  { title: "Step 2:", text: "We send you clients" },
+  { title: "Step 2:", text: "We connect you with customers" },
   { title: "Step 3:", text: "You only pay when you get results" },
 ];
 
@@ -44,14 +44,14 @@ const faqs = [
       "No! We only get paid on the clients we bring you. If you bring in your own clients you keep 100%.",
   },
   {
-    question: "How Does Yes Crew Track it's Leads?",
+    question: "How Does Yes Crew Track Results?",
     answer:
-      "We will be setting up a separate website, social media channels and other marketing assets to Yes Crew will own. Including a new phone number used for tracking purposes. We have various systems to monitor our leads using AI and special algorithms to determine how leads are performing.",
+      "We will be setting up a separate website, social media channels and other marketing assets to Yes Crew will own. Including a new phone number used for tracking purposes. We have various systems to monitor performance using AI and special algorithms to determine how campaigns are performing.",
   },
   {
     question: "What are the Service Providers Responsibilities?",
     answer:
-      "We ask that as a partner you get us updates, follow up with leads and do a good job with clients.",
+      "We ask that as a partner you get us updates, follow up with the customers we connect you with and do a good job with them.",
   },
   {
     question: "Can I Refer Clients to Yes Crew?",
@@ -100,7 +100,7 @@ export default function RiskFreeMarketing() {
             We Bring You Clients
           </h1>
           <p className="text-xl text-neutral-300 mb-2">
-            Get a Website, Leads, and Systems Built For You
+            Get a Website, Customers, and Systems Built For You
           </p>
           <p className="text-2xl text-white font-bold font-sans mb-8">
             $0 Upfront
@@ -132,7 +132,7 @@ export default function RiskFreeMarketing() {
           <div className="text-[#ff0000] text-2xl md:text-3xl font-bold space-y-2 font-sans">
             <p>No upfront cost</p>
             <p>No contracts</p>
-            <p>You only pay when you get paid</p>
+            <p>You only pay when you get results</p>
           </div>
         </div>
       </section>
@@ -164,8 +164,8 @@ export default function RiskFreeMarketing() {
           </p>
           <div className="space-y-3 text-xl text-white">
             <p>We build everything for you</p>
-            <p>We send you real clients</p>
-            <p>You only pay after you get paid!</p>
+            <p>We connect you with real customers</p>
+            <p>You only pay for real results!</p>
           </div>
         </div>
       </section>
