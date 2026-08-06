@@ -70,7 +70,7 @@ export default function AboutUs() {
             Risk Free Marketing® empowers people to do what they love by getting
             them clients with zero upfront costs. We invest in them to get them
             clients and give them AI powered systems that support their business
-            to free up their time so they can do what they love. Then we unite
+            to free up their time so they can do what they love. We then unite
             them to make their small business look like a large corporation by
             offering additional services through our network. Thus allowing them
             to make passive income, deliver exceptional value and see the world
