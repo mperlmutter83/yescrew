@@ -19,7 +19,7 @@ const pontano = Pontano_Sans({
 export const metadata: Metadata = {
   title: "Yes Crew | Risk Free Marketing® - Get Clients with Zero Upfront Cost",
   description:
-    "Risk Free Marketing® empowers people to do what they love by getting them clients with zero upfront costs. We invest in them to get them clients and give them AI powered systems that support their business.",
+    "Risk Free Marketing® empowers you to do what you love by getting you clients with zero upfront costs. We invest in you to get you clients and give you AI powered systems to free up your time.",
   metadataBase: new URL("https://yescrew.com"),
 };
 

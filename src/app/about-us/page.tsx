@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us - Yes Crew",
   description:
-    "Risk Free Marketing® empowers people to do what they love by getting them clients with zero upfront costs. Discover the Yes Crew movement for thriving local economies.",
+    "Risk Free Marketing® empowers you to do what you love by getting you clients with zero upfront costs. Discover the Yes Crew movement for thriving local economies.",
 };
 
 const coreValues = [
@@ -66,15 +66,18 @@ export default function AboutUs() {
           <h1 className="text-3xl md:text-5xl text-white mb-8">
             Our Vision and Mission
           </h1>
+          <p className="text-neutral-300 text-lg leading-relaxed mb-4">
+            Risk Free Marketing® empowers you to do what you love by getting
+            you clients with zero upfront costs. We invest in you to get you
+            clients and give you AI powered systems to free up your time so
+            you can do what you love.
+          </p>
           <p className="text-neutral-300 text-lg leading-relaxed">
-            Risk Free Marketing® empowers people to do what they love by getting
-            them clients with zero upfront costs. We invest in them to get them
-            clients and give them AI powered systems that support their business
-            to free up their time so they can do what they love. We then unite
-            them to make their small business look like a large corporation by
-            offering additional services through our network. Thus allowing them
-            to make passive income, deliver exceptional value and see the world
-            from a win-win perspective.
+            Once freed to do what you love, we unite your small business with
+            our network to make your small business look like a large
+            corporation. Our network allows you to offer additional services
+            that make you passive income, deliver exceptional value and see
+            the world from a win-win perspective.
           </p>
         </div>
       </section>

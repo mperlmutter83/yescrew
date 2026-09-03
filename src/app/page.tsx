@@ -92,17 +92,17 @@ export default function Home() {
             Our Vision and Mission
           </h2>
           <p className="text-neutral-700 leading-relaxed mb-4">
-            Risk Free Marketing® empowers people to do what they love by getting
-            them clients with zero upfront costs. We invest in them to get them
-            clients and give them AI powered systems that support their business
-            to free up their time so they can do what they love.
+            Risk Free Marketing® empowers you to do what you love by getting
+            you clients with zero upfront costs. We invest in you to get you
+            clients and give you AI powered systems to free up your time so
+            you can do what you love.
           </p>
           <p className="text-neutral-700 leading-relaxed">
-            We then unite them together in a concept I call Yes Crew. Yes Crew
-            unites small businesses together to look like a large corporations
-            to give small business passive income by offering additional
-            services through our network. Thus delivering exceptional value and
-            see the world from a win-win perspective.
+            Once freed to do what you love, we unite your small business with
+            our network to make your small business look like a large
+            corporation. Our network allows you to offer additional services
+            that make you passive income, deliver exceptional value and see
+            the world from a win-win perspective.
           </p>
         </div>
         <div className="max-w-4xl mx-auto text-center mt-16">
