@@ -55,6 +55,22 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${stint.variable} ${pontano.variable}`}>
       <head>
+        {/* RFM site data - pushed before GTM loads */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  rfm: {
+    schema_version: "1.0",
+    site_id: "yescrew",
+    provider_id: "f2c6bb21-f605-4602-a738-42e9f834ad6c",
+    provider_name: "Yes Crew",
+    service_category: "marketing",
+    market: "los_angeles"
+  }
+});`,
+          }}
+        />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
