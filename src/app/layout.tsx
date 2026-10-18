@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Stint_Ultra_Expanded, Pontano_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import PhoneClickTracker from "@/components/PhoneClickTracker";
 import Footer from "@/components/Footer";
 
 const stint = Stint_Ultra_Expanded({
@@ -98,6 +99,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+        <PhoneClickTracker />
         <Header />
         <main>{children}</main>
         <Footer />
