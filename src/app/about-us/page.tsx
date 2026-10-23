@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us - Yes Crew",
   description:
-    "Risk Free Marketing® empowers you to do what you love by getting you clients with zero upfront costs. Discover the Yes Crew movement for thriving local economies.",
+    "Risk Free Marketing® gets you clients with zero upfront costs on a pay for performance basis. Discover the Yes Crew movement for thriving local economies.",
 };
 
 const coreValues = [
@@ -67,14 +67,14 @@ export default function AboutUs() {
             Our Vision and Mission
           </h1>
           <p className="text-neutral-300 text-lg leading-relaxed mb-4">
-            Risk Free Marketing® empowers you to do what you love by getting
-            you clients with zero upfront costs. We invest in you to get you
-            clients and give you AI powered systems to free up your time so
-            you can do what you love.
+            Risk Free Marketing® gets you clients with zero upfront costs on
+            a pay for performance basis. We invest in you to get you clients
+            and give you AI powered systems to free up your time so you can
+            do what you love.
           </p>
           <p className="text-neutral-300 text-lg leading-relaxed">
-            Once freed to do what you love, we unite your small business with
-            our network to make your small business look like a large
+            Once freed to do what you love, we unite your business with our
+            network to make your small business look like a large
             corporation. Our network allows you to offer additional services
             that make you passive income, deliver exceptional value and see
             the world from a win-win perspective.
