@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 
+export const metadata = {
+  alternates: {
+    canonical: "https://www.yescrew.com",
+  },
+};
+
 const featureCards = [
   {
     title: "Grow Your Business",
