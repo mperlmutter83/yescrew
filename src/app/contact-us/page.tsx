@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,7 +29,7 @@ const contactCards = [
   },
   {
     title: "Hours of Operation",
-    lines: ["M-F: 10am – 8pm", "S-S: Closed (sometimes)"],
+    lines: ["M-F: 10am – 8pm", "S-S: By appointment"],
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
         <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6 4.2 2.5-.8 1.3-5.4-3.2V7h2v5.6z" />
@@ -111,12 +112,7 @@ export default function ContactUs() {
             />
           </div>
           <div className="bg-white rounded-lg p-2 overflow-hidden">
-            <iframe
-              aria-label="Contact Us"
-              src="https://forms.zohopublic.com/mikeyes1/form/ContactUs/formperma/CQZf1ja4nk3uFHK5sWMPt8ElJWTsckV6pq62Fv7kHJY"
-              style={{ height: "1200px", width: "100%", border: "none" }}
-              title="Contact Us"
-            />
+            <ContactForm />
           </div>
         </div>
       </section>

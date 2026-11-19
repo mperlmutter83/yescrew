@@ -82,7 +82,7 @@ export default function Home() {
               referrals from the network and watch your business grow.
             </p>
             <Link
-              href="/contact-us"
+              href="/apply-to-risk-free-marketing"
               className="inline-block bg-white text-black font-semibold px-8 py-3 rounded-full hover:bg-[#2ea3f2] hover:text-white transition-colors"
             >
               Join Now
@@ -139,7 +139,7 @@ export default function Home() {
               </p>
               <div>
                 <Link
-                  href="/contact-us"
+                  href="/apply-to-risk-free-marketing"
                   className="inline-block bg-[#2ea3f2] text-white font-semibold px-6 py-2.5 rounded-full hover:bg-white hover:text-black transition-colors"
                 >
                   {card.cta}
@@ -176,6 +176,22 @@ export default function Home() {
           <h2 className="text-3xl md:text-5xl text-white text-center mb-14">
             Real Results from Businesses Like Yours
           </h2>
+          <div className="grid md:grid-cols-3 gap-8 mb-14">
+            {[
+              { quote: "Excellent work, my business has grown tenfold.", name: "Jesse Nicassio", role: "CEO, Juke Performance", logo: "/Jukegymequip-Logo.png" },
+              { quote: "I recommend this company to everyone who is looking for marketing. They have been incredible!", name: "Judy Rosenberg", role: "Founder & CEO, Psychological Healing Center", logo: "/DR-Judy-vectorized-logo-11-3-22.png" },
+              { quote: "Quality customers every day!", name: "Adam Khoda", role: "Founder, The Elite Fashion Group", logo: "/Logo-Example-White.png" },
+            ].map((t) => (
+              <div key={t.name} className="bg-neutral-900 rounded-lg p-8 flex flex-col">
+                <p className="text-white text-lg leading-relaxed mb-6">&ldquo;{t.quote}&rdquo;</p>
+                <div className="mt-auto">
+                  <Image src={t.logo} alt={t.name} width={160} height={60} className="h-10 w-auto object-contain mb-3" />
+                  <p className="text-white font-semibold">{t.name}</p>
+                  <p className="text-neutral-400 text-sm">{t.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonialVideos.map((video) => (
               <div
@@ -301,7 +317,7 @@ export default function Home() {
               businesses together and help each other succeed.
             </p>
             <Link
-              href="/contact-us"
+              href="/apply-to-risk-free-marketing"
               className="inline-block bg-white text-black font-semibold px-8 py-3 rounded-full hover:bg-[#2ea3f2] hover:text-white transition-colors"
             >
               Join Now

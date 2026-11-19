@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ApplyForm from "@/components/ApplyForm";
 
 export const metadata: Metadata = {
   title: "Apply to Risk FREE Marketing® - Yes Crew",
@@ -19,12 +20,7 @@ export default function Apply() {
           </p>
         </div>
         <div className="max-w-3xl mx-auto bg-white rounded-lg p-2 overflow-hidden">
-          <iframe
-            aria-label="Apply for Risk Free Marketing"
-            src="https://forms.zohopublic.com/mikeyes1/form/ApplyforRiskFreeMarketing/formperma/nBMjbKRrBsYrtIUElxmWHEAM-oK1OAB9RD4EtZyevq0"
-            style={{ height: "1800px", width: "100%", border: "none" }}
-            title="Apply for Risk Free Marketing"
-          />
+          <ApplyForm />
         </div>
       </section>
     </div>
