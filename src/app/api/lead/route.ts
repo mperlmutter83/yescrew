@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
         }),
       });
 
-      if (res.status === 201) {
+      if (res.ok) {
         await sendNotification({
           name: body.name || "Unknown",
           phone: body.phone || "",
