@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us - Yes Crew",
+  title: "About Yes Crew | AI Built for Small Businesses, $0 Upfront",
   description:
-    "Risk Free Marketing® gets you clients with zero upfront costs on a pay for performance basis. Discover the Yes Crew movement for thriving local economies.",
+    "Yes Crew gives small businesses and solopreneurs AI-powered marketing with no upfront cost. You pay a performance fee only after we deliver a paying client.",
 };
 
 const coreValues = [
@@ -22,7 +22,7 @@ const coreValues = [
   },
   {
     title: "Fair Exchange of Value",
-    text: "We believe in partnerships where value is created first, and compensation follows. Our Risk Free Marketing® model exemplifies this philosophy, aligning the interests of service providers and clients to ensure a fair and rewarding exchange for all parties involved.",
+    text: "We believe in partnerships where value is created first, and compensation follows. Our Risk Free Marketing® model exemplifies this philosophy. We put up the money and build the AI-powered systems, and you pay a performance fee only after we deliver a paying client. That's a fair exchange when your budget is small.",
   },
   {
     title: "Community Over Competition",
@@ -34,14 +34,14 @@ const coreValues = [
   },
   {
     title: "Growth Through Opportunity",
-    text: "Everyone deserves the chance to build something meaningful with their skills. Our goal is to create systems that unlock opportunity for others.",
+    text: "Everyone deserves the chance to build something meaningful with their skills, whatever their starting budget. Our goal is to create systems, including AI, that unlock opportunity for others.",
   },
 ];
 
 const rfmPrinciples = [
   {
     title: "Performance-Based Marketing",
-    text: "Our Risk Free Marketing® model revolutionizes traditional marketing by aligning the interests of marketers, service providers, and customers. Instead of upfront costs, providers only pay when they gain paying clients, ensuring a fair exchange of value.",
+    text: "Our Risk Free Marketing® model revolutionizes traditional marketing by aligning the interests of marketers, service providers, and customers. Instead of upfront costs, providers only pay when they gain paying clients, ensuring a fair exchange of value, even on a small budget.",
   },
   {
     title: "Aligned Interests",
@@ -68,9 +68,15 @@ export default function AboutUs() {
           </h1>
           <p className="text-neutral-300 text-lg leading-relaxed mb-4">
             Risk Free Marketing® gets you clients with zero upfront costs on
-            a pay for performance basis. We invest in you to get you clients
-            and give you AI powered systems to free up your time so you can
+            a pay-for-performance basis. We invest in you to get you clients
+            and give you AI-powered systems to free up your time so you can
             do what you love.
+          </p>
+          <p className="text-neutral-300 text-lg leading-relaxed mb-4">
+            AI shouldn't be a luxury for companies with big teams and bigger
+            budgets. We build ours for small businesses and solopreneurs who
+            are just getting started, with a small budget and a lot to do. You
+            don't pay for it until it performs.
           </p>
           <p className="text-neutral-300 text-lg leading-relaxed">
             Once freed to do what you love, we unite your business with our
@@ -92,9 +98,9 @@ export default function AboutUs() {
             Join the Movement for Thriving Local Economies
           </h2>
           <p className="text-neutral-300 text-lg mb-8">
-            Discover a dynamic network where passionate professionals connect,
-            collaborate, and create value, transforming communities and
-            redefining success.
+            Yes Crew is a network of passionate professionals who connect,
+            collaborate, and create value for each other. Starting out on a
+            small budget is not a barrier here. It's who we built this for.
           </p>
           <Link
             href="/apply-to-risk-free-marketing"
@@ -171,8 +177,10 @@ export default function AboutUs() {
             <p>They are professionals.</p>
             <p>They are creators of value.</p>
             <p>
-              Yet too often they struggle not because they lack skill—but
-              because they lack systems, support, and opportunity.
+              Yet too often they struggle not because they lack skill, but
+              because they lack systems, support, and opportunity. The tools
+              that fix that, like AI, have mostly been priced for bigger
+              companies.
             </p>
             <p>Yes Crew exists to change that.</p>
             <p>
@@ -278,13 +286,17 @@ export default function AboutUs() {
               <div className="space-y-4 text-neutral-300 text-lg leading-relaxed">
                 <p>
                   Many professionals struggle to grow because traditional
-                  marketing demands large upfront investments with uncertain
-                  results.
+                  marketing, and most AI tools, demand upfront investment with
+                  uncertain results. That's a hard bet when you're a
+                  solopreneur or a small business starting out.
                 </p>
-                <p>Risk Free Marketing® changes this model.</p>
                 <p>
-                  Instead of paying first and hoping for results, professionals
-                  only pay when value is delivered.
+                  Risk Free Marketing® changes this model.
+                </p>
+                <p>
+                  Instead of paying first and hoping for results, you only pay
+                  when value is delivered, and the AI does the heavy lifting in
+                  between.
                 </p>
                 <p>
                   This creates alignment between marketers, service providers,

@@ -4,15 +4,15 @@ import type { Metadata } from "next";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "Risk FREE Marketing® - Yes Crew",
+  title: "Risk FREE Marketing® | AI-Powered Clients, $0 Upfront - Yes Crew",
   description:
-    "We Bring You Clients. Get a Website, Customers, and Systems Built For You — $0 Upfront. We build everything for you and you only pay when you get results.",
+    "AI-powered marketing built for small businesses and solopreneurs on small budgets. No upfront cost, no contracts. You pay a performance fee only after we deliver a paying client.",
 };
 
 const everythingYouNeed = [
   { emoji: "🚀", title: "Get More Clients", items: ["Website", "Social Media"] },
   { emoji: "💰", title: "Close More Clients", items: ["Appointment Booking", "CRM System"] },
-  { emoji: "🤖", title: "Automate Everything", items: ["AI Assistant", "Follow-Ups"] },
+  { emoji: "🤖", title: "Automate Everything", items: ["AI Assistant", "Follow-Ups"], note: "Less busywork for you, so you can stay on the work you do best." },
 ];
 
 const steps = [
@@ -94,13 +94,15 @@ export default function RiskFreeMarketing() {
       <section className="py-24 px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-[#ff0000] text-2xl md:text-3xl font-bold font-sans mb-4">
-            ONLY PAY FOR RESULTS
+            ONLY PAY AFTER IT PERFORMS
           </p>
           <h1 className="text-4xl md:text-6xl text-white mb-6">
-            We Bring You Clients
+            AI That Brings You Clients. You Pay After It Works.
           </h1>
           <p className="text-xl text-neutral-300 mb-2">
-            Get a Website, Customers, and Systems Built For You
+            Built for small businesses and solopreneurs starting out on a small
+            budget. We build your website, your systems, and your AI. You pay
+            a performance fee only after we deliver a paying client.
           </p>
           <p className="text-2xl text-white font-bold font-sans mb-8">
             $0 Upfront
@@ -157,7 +159,9 @@ export default function RiskFreeMarketing() {
             Why This Isn’t Like Other Marketing
           </h2>
           <p className="text-neutral-400 text-xl mb-4">
-            Most marketing agencies charge you upfront and hope it works.
+            Most agencies and AI platforms charge you first and hope it works.
+            For a business starting out on a small budget, that's a bet you
+            shouldn't have to make.
           </p>
           <p className="text-[#ff0000] text-3xl md:text-4xl font-bold font-sans mb-8">
             We do the opposite.
@@ -190,10 +194,14 @@ export default function RiskFreeMarketing() {
       {/* EVERYTHING YOU NEED */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-5xl text-white text-center mb-14">
-            Everything You Need —{" "}
-            <span className="text-[#ff0000]">$0 Upfront</span>
+          <h2 className="text-3xl md:text-5xl text-white text-center mb-4">
+            Everything You Need.{" "}
+            <span className="text-[#ff0000]">$0 Upfront.</span>
           </h2>
+          <p className="text-neutral-300 text-center max-w-2xl mx-auto mb-14">
+            The tools big companies use, set up for small businesses and
+            solopreneurs.
+          </p>
           <div className="grid md:grid-cols-3 gap-10">
             {everythingYouNeed.map((col) => (
               <div key={col.title} className="text-center md:text-left">
@@ -210,6 +218,9 @@ export default function RiskFreeMarketing() {
                     </li>
                   ))}
                 </ul>
+                {col.note ? (
+                  <p className="mt-4 text-neutral-400 text-sm">{col.note}</p>
+                ) : null}
               </div>
             ))}
           </div>
@@ -255,8 +266,8 @@ export default function RiskFreeMarketing() {
             Start Getting Clients Risk-Free
           </h2>
           <p className="text-neutral-300 text-lg mb-8">
-            We put up all the money! Pay us nothing until you start making
-            money.
+            We put up all the money. You don't need a big budget to start. Pay
+            us a performance fee only after we deliver a paying client.
           </p>
           <Link
             href="/apply-to-risk-free-marketing"
