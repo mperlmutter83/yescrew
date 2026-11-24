@@ -18,9 +18,9 @@ const pontano = Pontano_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Yes Crew | Risk Free Marketing® - Get Clients with Zero Upfront Cost",
+  title: "Yes Crew | Risk Free Marketing® - AI Built for Small Businesses, $0 Upfront",
   description:
-    "Risk Free Marketing® gets you clients with zero upfront costs on a pay for performance basis. We invest in you to get you clients and give you AI powered systems to free up your time.",
+    "AI-powered marketing for small businesses and solopreneurs starting with small budgets. No upfront cost, no contracts. You pay a performance fee only when we deliver a paying client.",
   metadataBase: new URL("https://yescrew.com"),
 };
 

@@ -11,19 +11,19 @@ const featureCards = [
   {
     title: "Grow Your Business",
     image: "/e3803745-d93f-49f4-a7f3-3abd67d1775e.png",
-    text: "Get clients sent to your business with no upfront cost. Risk FREE Marketing® puts up all the money to get you clients and only gets paid a performance fee once we deliver your business a paying client.",
+    text: "Get clients sent to your business with no upfront cost. Risk FREE Marketing® puts up all the money to get you clients and only gets paid a performance fee once we deliver your business a paying client. Your budget can start at zero.",
     cta: "Learn More",
   },
   {
     title: "Expand Your Network",
     image: "/AdobeStock_389578103-scaled.jpeg",
-    text: "Get referred opportunities through our network. We call it Yes Crew. Members of our network offer each other's services and get paid referral fees for referring to the network.",
+    text: "Get referred opportunities through our network. We call it Yes Crew. Members offer each other's services and get paid referral fees for referring to the network. It's how a solo business gets a bigger team without hiring one.",
     cta: "Discover How",
   },
   {
     title: "Make Passive Income",
     image: "/AdobeStock_683895359-scaled.jpeg",
-    text: "Make money while you sleep. Get paid by referring to the network. Make your small business look like a large company with our network.",
+    text: "Make money while you sleep. Get paid by referring to the network, and make your small business look like a large company.",
     cta: "Get Started",
   },
 ];
@@ -34,10 +34,20 @@ const testimonialVideos = [
   { id: "qDfnPrZIUTE", title: "\u201cI Only Pay for Results\u201d \u2013 Real Experience with Yes Crew & Risk Free Marketing®" },
 ];
 
-const everythingYouNeed = [
+const everythingYouNeed: {
+  emoji: string;
+  title: string;
+  items: string[];
+  note?: string;
+}[] = [
   { emoji: "🚀", title: "Get More Clients", items: ["Website", "Social Media"] },
   { emoji: "💰", title: "Close More Clients", items: ["Appointment Booking", "CRM System"] },
-  { emoji: "🤖", title: "Automate Everything", items: ["AI Assistant", "Follow-Ups"] },
+  {
+    emoji: "🤖",
+    title: "Automate Everything",
+    items: ["AI Assistant", "Follow-Ups"],
+    note: "Less busywork for you, so you can stay on the work you do best.",
+  },
 ];
 
 const steps = [
@@ -72,14 +82,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-28 lg:py-40">
           <div className="max-w-2xl">
             <p className="text-sm tracking-[0.2em] uppercase text-white mb-4">
-              Unlock New Opportunities
+              AI for Small Budgets
             </p>
             <h1 className="text-4xl md:text-6xl text-white leading-tight mb-6">
-              Say Yes with Yes Crew
+              Big-Business AI. $0 to Start.
             </h1>
             <p className="text-lg text-neutral-200 mb-8">
-              Join our network to get clients from Risk FREE Marketing®,
-              referrals from the network and watch your business grow.
+              Yes Crew builds AI-powered marketing for small businesses and
+              solopreneurs who are just getting started. We put up the money.
+              You pay a performance fee only after we deliver a paying
+              client.
             </p>
             <Link
               href="/apply-to-risk-free-marketing"
@@ -99,16 +111,22 @@ export default function Home() {
           </h2>
           <p className="text-neutral-700 leading-relaxed mb-4">
             Risk Free Marketing® gets you clients with zero upfront costs on
-            a pay for performance basis. We invest in you to get you clients
-            and give you AI powered systems to free up your time so you can
+            a pay-for-performance basis. We invest in you to get you clients
+            and give you AI-powered systems to free up your time so you can
             do what you love.
           </p>
+          <p className="text-neutral-700 leading-relaxed mb-4">
+            Most AI tools are priced and built for companies with big teams
+            and bigger budgets. Ours is built for the one-person shop and
+            the small crew: you're starting out, every dollar counts, and you
+            can't pay for something that hasn't worked yet. So you don't.
+          </p>
           <p className="text-neutral-700 leading-relaxed">
-            Once freed to do what you love, we unite your business with our
-            network to make your small business look like a large
-            corporation. Our network allows you to offer additional services
-            that make you passive income, deliver exceptional value and see
-            the world from a win-win perspective.
+            Once you're freed up to do what you love, we unite your business
+            with our network to make your small business look like a large
+            corporation. Our network lets you offer additional services, earn
+            passive income, and deliver exceptional value from a win-win
+            perspective.
           </p>
         </div>
         <div className="max-w-4xl mx-auto text-center mt-16">
@@ -154,7 +172,7 @@ export default function Home() {
       <section className="py-20 px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl text-white mb-8">
-            Discover Risk FREE Marketing®
+            AI Technology With No Upfront Cost
           </h2>
           <div className="text-[#ff0000] text-2xl md:text-3xl font-bold space-y-2 mb-10 font-sans">
             <p>No upfront cost</p>
@@ -219,7 +237,9 @@ export default function Home() {
           </h2>
           <div>
             <p className="text-neutral-400 text-lg mb-4">
-              Most marketing agencies charge you upfront and hope it works.
+              Most agencies and AI platforms charge you first and hope it
+              works. For a business starting out on a small budget, that's a
+              bet you shouldn't have to make.
             </p>
             <p className="text-[#ff0000] text-3xl md:text-4xl font-bold mb-6 font-sans">
               We do the opposite.
@@ -236,10 +256,14 @@ export default function Home() {
       {/* EVERYTHING YOU NEED */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-5xl text-white text-center mb-14">
+          <h2 className="text-3xl md:text-5xl text-white text-center mb-6">
             Everything You Need —{" "}
             <span className="text-[#ff0000]">$0 Upfront</span>
           </h2>
+          <p className="text-neutral-400 text-lg text-center mb-14">
+            The tools big companies use, set up for small businesses and
+            solopreneurs.
+          </p>
           <div className="grid md:grid-cols-3 gap-10">
             {everythingYouNeed.map((col) => (
               <div key={col.title} className="text-center md:text-left">
@@ -253,6 +277,9 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+                {col.note && (
+                  <p className="text-neutral-400 text-base mt-4">{col.note}</p>
+                )}
               </div>
             ))}
           </div>
@@ -312,9 +339,10 @@ export default function Home() {
               Join Yes Crew Today!
             </h2>
             <p className="text-neutral-200 text-lg mb-8">
-              Don’t miss out on valuable opportunities. Join Yes Crew and start
-              saying yes to new business prospects. Together, we can bring
-              businesses together and help each other succeed.
+              You don't need a big budget to get started. Join Yes Crew, put
+              AI to work for your business with nothing due upfront, and
+              start saying yes to new clients. Together, we help each other
+              succeed.
             </p>
             <Link
               href="/apply-to-risk-free-marketing"
